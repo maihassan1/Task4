@@ -1,30 +1,27 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Widgets/contact.dart';
 class  Home extends StatelessWidget {
   const Home ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(backgroundColor: Colors.greenAccent,leading:Icon(Icons.menu) ,centerTitle:true ,title:Text("Task 2")),
-      backgroundColor: Colors.black,
-        body:  SafeArea(child :Row(
-          children: [
-            Container(
-              height: 500,width: 250,decoration: BoxDecoration(color: Colors.red,borderRadius: BorderRadiusDirectional.circular(10)),
-            child: Text("Child 1",style: TextStyle(fontSize: 25,color: Colors.white)),padding: EdgeInsetsDirectional.only(start:75,top:210),)
-          ,SizedBox(width: 10,)
-            ,Padding(
-            padding: const EdgeInsetsDirectional.symmetric(vertical: 80),
-            child: Column(children: [Container(width: 245,height: 245,
-                  decoration:BoxDecoration(color: Colors.green,borderRadius: BorderRadiusDirectional.circular(10))
-                  ,child: Text("Child 2",style: TextStyle(fontSize: 25,color: Colors.white)),padding: EdgeInsetsDirectional.only(start:75,top:105))
-              ,SizedBox(height: 10,)
-              ,Container(width: 245,height: 245,
-                    decoration:BoxDecoration(color: Colors.blue,borderRadius: BorderRadiusDirectional.circular(10))
-                    ,child: Text("Child 3",style: TextStyle(fontSize: 25,color: Colors.white)),padding: EdgeInsetsDirectional.only(start:75,top:105))
-            ],),
-          )],
-        ),
-           )
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar:AppBar(backgroundColor: Colors.blue,title:Text("Contacts",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40)),centerTitle: true,actions: [ Padding(
+        padding: const EdgeInsets.all(6.0),
+        child: Icon(Icons.add),
+      ),] ),
+      body: SingleChildScrollView(child: Column(children: [
+          contact(num :"1",name:"Mohamed Samy",num2:"01016673951            ")
+          ,contact(num :"2",name:"Mohamed Elsebaey",num2:"01559508335                   ")
+          ,contact(num :"3",name:"Ahmed      ",num2:"01023423526")
+          ,contact(num :"4",name:"Omar                       ",num2:"01013563951                   ")
+          ,contact(num :"5",name:"Ali                              ",num2:"01345698755                        ")
+
+      ]),)
+
+
 
       );
 
