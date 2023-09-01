@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/home.dart';
-import 'Screens/thirdScreen.dart';
+import 'thirdScreen.dart';
 class secondScreen extends StatefulWidget {
   const secondScreen({super.key});
   static var id = "d";
@@ -41,6 +41,7 @@ class _secondScreenState extends State<secondScreen> {
                  hintText: "Password",
                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10) )),
                keyboardType: TextInputType.emailAddress,
+               maxLength: 8,
                obscureText: obscure,
              ),
         SizedBox(height:50),
